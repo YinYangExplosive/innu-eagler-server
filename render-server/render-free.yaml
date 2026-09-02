@@ -3,8 +3,8 @@ services:
     name: eaglercraft-survival-free
     runtime: docker
     plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerfilePath: ./render-server/Dockerfile
+    dockerContext: ./render-server
     numInstances: 1
     autoDeployTrigger: commit
 
