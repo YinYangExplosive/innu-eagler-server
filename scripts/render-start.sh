@@ -13,4 +13,11 @@ if [ ! -d "/data/world" ]; then
     echo "=== World installed ==="
 fi
 
+# 自作プラグインをMinecraftのpluginsフォルダへコピー
+mkdir -p /data/plugins
+cp -n /plugins/*.jar /data/plugins/ 2>/dev/null || true
+
+echo "=== Custom plugins installed ==="
+ls -lh /data/plugins/
+
 exec /image/scripts/start "$@"
